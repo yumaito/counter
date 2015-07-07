@@ -1,3 +1,6 @@
+*{
+	box-sizing:border-box;
+}
 body{
 	background-color:white;
 	margin: 0;
@@ -24,7 +27,7 @@ body{
 			}
 			padding: 20px;
 		}
-		#from,#display,#keika,#to,#display2{
+		#from,#display,#to,#display2{
 			width: 100%;
 			margin: {
 				bottom: 10px;
@@ -32,9 +35,6 @@ body{
 		}
 		#from,#to{
 			text-align: center;
-		}
-		#keika{
-			text-align: right;
 		}
 		#display,#display2{
 			.val{

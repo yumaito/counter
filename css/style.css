@@ -1,4 +1,8 @@
 @charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: white;
   margin: 0;
@@ -24,17 +28,13 @@ body #main #countup, body #main #countdown {
   padding: 20px;
 }
 
-body #main #from, body #main #display, body #main #keika, body #main #to, body #main #display2 {
+body #main #from, body #main #display, body #main #to, body #main #display2 {
   width: 100%;
   margin-bottom: 10px;
 }
 
 body #main #from, body #main #to {
   text-align: center;
-}
-
-body #main #keika {
-  text-align: right;
 }
 
 body #main #display .val, body #main #display2 .val {
