@@ -15,12 +15,21 @@ body #main {
   padding: 20px;
 }
 
-body #main #from, body #main #display, body #main #keika {
+body #main #countup, body #main #countdown {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+body #main #from, body #main #display, body #main #keika, body #main #to, body #main #display2 {
   width: 100%;
   margin-bottom: 10px;
 }
 
-body #main #from {
+body #main #from, body #main #to {
   text-align: center;
 }
 
@@ -28,7 +37,7 @@ body #main #keika {
   text-align: right;
 }
 
-body #main #display .val {
+body #main #display .val, body #main #display2 .val {
   color: red;
   font-size: 2em;
 }

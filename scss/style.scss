@@ -14,19 +14,29 @@ body{
 			right: auto;
 		}
 		padding: 20px;
-		#from,#display,#keika{
+		#countup,#countdown{
+			border-radius: 10px;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
+			border: 1px solid #000;
+			margin: {
+				bottom: 20px;
+			}
+			padding: 20px;
+		}
+		#from,#display,#keika,#to,#display2{
 			width: 100%;
 			margin: {
 				bottom: 10px;
 			}
 		}
-		#from{
+		#from,#to{
 			text-align: center;
 		}
 		#keika{
 			text-align: right;
 		}
-		#display{
+		#display,#display2{
 			.val{
 				color: red;
 				font: {
