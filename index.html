@@ -15,8 +15,8 @@
 		$(window).load(function(){
 			var start = new Date(2004,8,1,10,0,0);
 			var goal = new Date(2015,11,1,10,0,0);
-			var current = new Date();
 			setInterval(function(){
+				var current = new Date();
 				//startから今までの経過時間
 				difference(start,current,'#display');
 				//今からgoalまでの時間（過ぎたら経過時間になる）
