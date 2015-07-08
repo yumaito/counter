@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -9,7 +10,7 @@
 
 html {
   width: 100%;
-  background-color: #111111;
+  background-color: #111;
   color: #fff;
 }
 
@@ -17,40 +18,93 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "メイリオ", Meiryo, serif;
+  font-weight: bold;
   font-size: 30px;
   /*リストの基本設定*/
   /*=============================*/
 }
+
 body ul {
   margin: 0;
   padding: 0;
 }
+
 body li {
   list-style: none;
   display: inline-block;
 }
+
 body #main {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
 }
+
 body #main #countdown {
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
-  border: 1px solid white;
+  border: 1px solid #fff;
   padding: 10px;
 }
 
-#display ul li .val, #display ul li .hours, #display ul li .minutes, #display ul li .seconds {
-  font-family: 'seg';
+#display, #condition {
+  text-align: center;
 }
+
+#display {
+  margin-bottom: 20px;
+}
+
+#display ul {
+  margin-left: 50px;
+}
+
+#display ul li {
+  font-family: 'seg';
+  font-size: 100px;
+  padding: 10px;
+}
+
+#display ul li .milliseconds {
+  font-size: 50px;
+}
+
 #display ul li .val {
   position: relative;
 }
+
+#display ul li .val.seconds {
+  margin-right: 10px;
+}
+
+#display ul li .un.date {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: normal;
+  font-size: 33.33333px;
+}
+
 #display p {
   margin: 0;
   padding: 0;
+  text-align: left;
+}
+
+#condition {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-weight: normal;
+}
+
+#condition ul {
+  display: inline-block;
+}
+
+#condition ul li {
+  padding: 20px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border: 1px solid #fff;
 }

@@ -1,18 +1,59 @@
+#display,#condition{
+	text-align: center;
+}
 #display{
+	margin: {
+			bottom: 20px;
+		}
 	ul{
+		margin: {
+			left: 50px;
+		}
 		li{
-			.val,.hours,.minutes,.seconds{
-				font: {
-					family:'seg';
-				}	
+			font:{
+				family:'seg';
+				size:$displayFontSize;
+			}
+			padding: 10px;
+			.milliseconds{
+				font:{
+					size:$displayFontSize / 2;
+				}
 			}
 			.val{
 				position: relative;
+			}
+			.val.seconds{
+				margin: {
+					right: 10px;
+				}
+			}
+			.un.date{
+				font: {
+					family:$baseFont;
+					weight:normal;
+					size:$displayFontSize / 3;
+				}
 			}
 		}
 	}
 	p{
 		margin: 0;
 		padding: 0;
+		text-align: left;
+	}
+}
+#condition{
+	font: {
+		family:$baseFont;
+		weight:normal;
+	}
+	ul{
+		display: inline-block;
+		li{
+			padding: 20px;
+			@include round;
+			border: $border;
+		}
 	}
 }
