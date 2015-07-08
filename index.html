@@ -17,6 +17,8 @@
 			//JSTで入力==========================================
 			var goal = new Date(2015,7,31,10,0,0);
 			var current = new Date();
+			var bar = Math.abs(current-goal);
+			bar = 0;
 			//==================================================
 			difference(current,goal,'#display');
 			//var count = 0;
@@ -24,6 +26,9 @@
 			setInterval(function(){
 				var current = new Date();
 				difference(current,goal,'#display');
+				$('#bar').animate({width:bar + '%'});
+				bar+=0.5;
+				bar = bar%101;
 			},10);
 			setInterval(function(){
 				$('.un').fadeOut(500,function(){$(this).fadeIn(500)});
@@ -57,10 +62,13 @@
 			</div>
 			<div id = "condition">
 				<ul>
-					<li>Normal</li>
-					<li>Warning</li>
-					<li>Danger</li>
+					<li>NORMAL</li>
+					<li>WARNING</li>
+					<li>DANGER</li>
 				</ul>
+			</div>
+			<div id = "rate">
+				<div id ="bar"></div>
 			</div>
 		</div>
 	</div>

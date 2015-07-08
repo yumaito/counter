@@ -7,14 +7,16 @@
 		}
 	ul{
 		margin: {
-			left: 50px;
+			//left: 50px;
 		}
+		@include round;
+		border: $border;
 		li{
 			font:{
 				family:'seg';
 				size:$displayFontSize;
 			}
-			padding: 10px;
+			padding: 20px;
 			.milliseconds{
 				font:{
 					size:$displayFontSize / 2;
@@ -41,6 +43,7 @@
 		margin: 0;
 		padding: 0;
 		text-align: left;
+		//display: inline-block;
 	}
 }
 #condition{
@@ -51,7 +54,12 @@
 	ul{
 		display: inline-block;
 		li{
-			padding: 20px;
+			padding: {
+				top: 20px;
+				bottom: 20px;
+				left: 30px;
+				right: 30px;
+			}
 			@include round;
 			border: $border;
 		}
