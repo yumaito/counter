@@ -19,10 +19,15 @@
 			var current = new Date();
 			//==================================================
 			difference(current,goal,'#display');
+			//var count = 0;
+			//var flag = true;
 			setInterval(function(){
-				//var current = new Date();
-				//difference(current,goal,'#display');
+				var current = new Date();
+				difference(current,goal,'#display');
 			},10);
+			setInterval(function(){
+				$('.un').fadeOut(500,function(){$(this).fadeIn(500)});
+			},1000);
 		});
 	</script>
 </head>
@@ -36,8 +41,18 @@
 			<div id = "display">
 				<p>あと</p>
 				<ul>
-					<li id = "day"></li>
-					<li id = "time"></li>
+					<li id = "day">
+						<span class= "val date"></span>
+						<span class="un date">DAYS</span>
+					</li>
+					<li id = "time">
+						<span class="val hours"></span>
+						<span class="un hours">:</span>
+						<span class="val minutes"></span>
+						<span class="un minutes">:</span>
+						<span class="val seconds"></span>
+						<span class="val milliseconds"></span>
+					</li>
 				</ul>
 			</div>
 			<div id = "condition">

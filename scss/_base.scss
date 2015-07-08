@@ -8,7 +8,7 @@
 html{
 	width: 100%;
 	background: {
-		color: $darkGray;
+		color: $darkGray2;
 	}
 	color: #fff;
 }
@@ -40,7 +40,8 @@ body{
 		padding: 20px;
 		#countdown{
 			@include round;
-			border:$border;
+			//border:$border;
+			background: $darkGray;
 			padding: 10px;
 		}
 	}
