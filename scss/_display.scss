@@ -1,0 +1,18 @@
+#display{
+	ul{
+		li{
+			.val,.hours,.minutes,.seconds{
+				font: {
+					family:'seg';
+				}	
+			}
+			.val{
+				position: relative;
+			}
+		}
+	}
+	p{
+		margin: 0;
+		padding: 0;
+	}
+}

@@ -1,10 +1,4 @@
-*{
-	box-sizing:border-box;
-}
-@font-face{
-	font-family: 'seg';
-	src:url('../font/DSEG7Modern-BoldItalic.woff');
-}
-html{
-	width: 100%;
-}
+@import 'variables';
+@import 'mixins';
+@import 'base';
+@import 'display';

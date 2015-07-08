@@ -1,0 +1,46 @@
+*{
+	box-sizing:border-box;
+}
+@font-face{
+	font-family: 'seg';
+	src:url('../font/DSEG7Modern-BoldItalic.woff');
+}
+html{
+	width: 100%;
+	background: {
+		color: $darkGray;
+	}
+	color: #fff;
+}
+body{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	font:{
+		family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		size:30px;
+	}
+	/*リストの基本設定*/
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style: none;
+		display: inline-block;
+	}
+	/*=============================*/
+	#main{
+		width: 100%;
+		margin: {
+			left: auto;
+			right: auto;
+		}
+		padding: 20px;
+		#countdown{
+			@include round;
+			border:$border;
+			padding: 10px;
+		}
+	}
+}

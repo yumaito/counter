@@ -13,46 +13,44 @@
 	<script src="lib/timer2.js"></script>
 	<script type="text/javascript">
 		$(window).load(function(){
-			var start = new Date(2004,8,1,10,0,0);
-			var goal = new Date(2015,11,1,10,0,0);
-			$('#from').text(formatDate(start) + 'から');
-			$('#to').text(formatDate(goal) + 'まで');
+			//var start = new Date(2004,8,1,10,0,0);
+			//JSTで入力==========================================
+			var goal = new Date(2015,7,31,10,0,0);
+			//==================================================
+			//$('#from').text(formatDate(start) + 'から');
+			//$('#to').text(formatDate(goal) + 'まで');
 			//10msごとに以下を実行
 			setInterval(function(){
 				var current = new Date();
 				//startから今までの経過時間
-				difference(start,current,'#display');
+				//difference(start,current,'#display');
 				//今からgoalまでの時間（過ぎたら経過時間になる）
-				difference(current,goal,'#display2');
+				difference(current,goal,'#display');
 			},10);
 		});
-		function formatDate(date,format){
-			if(!format){
-				format = 'YYYY年MM月DD日 hh:mm:ss';
-			}
-			format = format.replace(/YYYY/g,date.getFullYear());
-			format = format.replace(/MM/g,('0'+(date.getMonth()+1)).slice(-2));
-			format = format.replace(/DD/g,('0'+date.getDate()).slice(-2));
-			format = format.replace(/hh/g,('0'+date.getHours()).slice(-2));
-			format = format.replace(/mm/g,('0'+date.getMinutes()).slice(-2));
-			format = format.replace(/ss/g,('0'+date.getSeconds()).slice(-2));
-			if(format.match(/S/g)){
-				var milliseconds = ('00'+date.getMilliseconds()).slice(-3);
-				var length = format.match(/S/g).length;
-				for(var i = 0;i < length; i++){
-					format = format.replace(/S/,milliseconds.substring(i,i+1));
-				}
-			}
-			return format;
-		}
 	</script>
 </head>
 
 <body>
 	<div id = "main">
 		<div id = "countdown">
-			<div id = "to">x dayまで</div>
-			<div id = "display2"></div>
+			<!--=======================================-->
+			<div id = "to">xxの締切まで</div>
+			<!--=======================================-->
+			<div id = "display">
+				<ul>
+					<li id = "day"></li>
+					<li id = "time"></li>
+				</ul>
+				<p>DAYS</p>
+			</div>
+			<div id = "condition">
+				<ul>
+					<li>Normal</li>
+					<li>Warning</li>
+					<li>Danger</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </body>
