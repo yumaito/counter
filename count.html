@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>カウントアップダウン</title>
+	<!--css-->
+	<link rel ="stylesheet" type="text/css" href="css/style.css" media="all">
+	<!--スクリプト-->
+	<!--jQuery-->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!--<script src="lib/moment-with-locales.js"></script>-->
+	<!---->
+	<script src="lib/timer.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+			var start = new Date(2004,8,1,10,0,0);
+			var goal = new Date(2015,11,1,10,0,0);
+			$('#from').text(formatDate(start) + 'から');
+			$('#to').text(formatDate(goal) + 'まで');
+			//10msごとに以下を実行
+			setInterval(function(){
+				var current = new Date();
+				//startから今までの経過時間
+				difference(start,current,'#display');
+				//今からgoalまでの時間（過ぎたら経過時間になる）
+				difference(current,goal,'#display2');
+			},10);
+		});
+		function formatDate(date,format){
+			if(!format){
+				format = 'YYYY年MM月DD日 hh:mm:ss';
+			}
+			format = format.replace(/YYYY/g,date.getFullYear());
+			format = format.replace(/MM/g,('0'+(date.getMonth()+1)).slice(-2));
+			format = format.replace(/DD/g,('0'+date.getDate()).slice(-2));
+			format = format.replace(/hh/g,('0'+date.getHours()).slice(-2));
+			format = format.replace(/mm/g,('0'+date.getMinutes()).slice(-2));
+			format = format.replace(/ss/g,('0'+date.getSeconds()).slice(-2));
+			if(format.match(/S/g)){
+				var milliseconds = ('00'+date.getMilliseconds()).slice(-3);
+				var length = format.match(/S/g).length;
+				for(var i = 0;i < length; i++){
+					format = format.replace(/S/,milliseconds.substring(i,i+1));
+				}
+			}
+			return format;
+		}
+	</script>
+</head>
+
+<body>
+	<div id = "main">
+		<div id = "countup">
+			<div id = "from">x dayから</div>
+			<div id = "display"></div>
+		</div>
+		<div id = "countdown">
+			<div id = "to">x dayまで</div>
+			<div id = "display2"></div>
+		</div>
+	</div>
+</body>
+</html>
