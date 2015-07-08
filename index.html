@@ -8,16 +8,18 @@
 	<!--スクリプト-->
 	<!--jQuery-->
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="lib/moment-with-locales.js"></script>
+	<!--<script src="lib/moment-with-locales.js"></script>-->
 	<!---->
 	<script src="lib/timer.js"></script>
 	<script type="text/javascript">
 		$(window).load(function(){
-			var start = moment(new Date(2004,8,1,10,0,0));
-			var goal = moment(new Date(2015,11,1,10,0,0));
-			var current = moment();
+			var start = new Date(2004,8,1,10,0,0);
+			var goal = new Date(2015,11,1,10,0,0);
+			var current = new Date();
 			setInterval(function(){
+				//startから今までの経過時間
 				difference(start,current,'#display');
+				//今からgoalまでの時間（過ぎたら経過時間になる）
 				difference(current,goal,'#display2');
 			},10);
 		});
