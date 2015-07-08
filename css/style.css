@@ -1,5 +1,11 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'seg';
+  src: url("../font/DSEG7Modern-BoldItalic.woff");
 }
 
 html {
@@ -15,12 +21,14 @@ body {
   font-size: 30px;
   text-align: center;
 }
+
 body #main {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
 }
+
 body #main #countup, body #main #countdown {
   border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -29,14 +37,22 @@ body #main #countup, body #main #countdown {
   margin-bottom: 20px;
   padding: 20px;
 }
+
 body #main #from, body #main #display, body #main #to, body #main #display2 {
   width: 100%;
   margin-bottom: 10px;
 }
+
 body #main #from, body #main #to {
   text-align: center;
 }
+
 body #main #display .val, body #main #display2 .val {
   color: red;
   font-size: 1.5em;
+  font-family: 'seg';
+}
+
+body #main #display .un, body #main #display2 .un {
+  font-family: 'seg';
 }
